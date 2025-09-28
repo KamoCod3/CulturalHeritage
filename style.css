@@ -1,0 +1,1289 @@
+:root{
+    --text-color: rgb(21, 200, 255);
+}
+
+*{
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffffff;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body::selection{
+    color: #ffffff;
+    background-color: var(--text-color);
+}
+
+body{
+    padding: 0.5em;
+}
+
+/* === Universal Header Styles === */
+header, .header-attire, .header-contact, .header-crafts, .music-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    padding: 0.9em;
+    border: #ffffff 1px solid;
+    border-radius: 10px;
+    transition: all 0.6s ease;
+    
+    position: fixed;
+    top: 0.5em;
+    left: 0.5em;
+    right: 0.5em;
+    z-index: 1000;
+}
+
+/* Fixed header positioning for different pages */
+.header-attire, .header-contact, .header-crafts, .music-header {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+header:hover, .header-attire:hover, .header-contact:hover, .header-crafts:hover, .music-header:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 4px 4px 15px #ffffffc7;
+}
+
+header img {
+    display: none;
+}
+
+.heading-highlight {
+    color: var(--text-color);
+}
+
+header > h2, .header-attire > h2, .header-contact > h2, .header-crafts > h2, .music-header > h2 {
+    flex-grow: 1;
+    margin: 0;
+}
+
+ul.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 0;
+}
+
+ul.nav-links li {
+    padding: 0.7em 1.2em;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+ul.nav-links li:hover {
+    background-color: #ffffff;
+    box-shadow: 2px 2px 12px #ffffff;
+}
+
+ul.nav-links li:last-child {
+    border-left: #ffffff 2px solid;
+}
+
+ul.nav-links a {
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: inherit;
+}
+
+ul.nav-links li:hover a {
+    color: rgb(21, 200, 255);
+}
+
+/* === Home Page Styles === */
+.home-body {
+    background: url(images/lesotho-highlands-water-scheme.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 5rem repeat(4, 1fr) 7rem;
+    height: 100dvh;
+    gap: 0.7em;
+    padding: 0.2em;
+    min-height: 100vh;
+}
+
+/* Home page uses grid positioning for header */
+.home-body header {
+    grid-row: 1 / 2;
+    grid-column: 1 / 7;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    justify-content: end;
+}
+
+/*Main section*/
+.main-home {
+    grid-row: 2 / 6;
+    grid-column: 1 / 7;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 400ms ease;
+}
+
+.main-home:hover {
+    box-shadow: 4px 4px 15px #000000c7;
+}
+
+section.frost-background {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    position: relative;
+    width: 55em;
+    display: flex;
+    align-items: center;
+    transition: background-color 300ms ease;
+}
+
+.main-home:hover .frost-background {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+section.frost-background img {
+    max-width: 15em;
+    position: absolute;
+    right: -75px;
+    border-radius: 0.4em;
+    border: var(--text-color) 2px solid;
+    transition: box-shadow 200ms linear, transform 250ms ease-out;
+}
+
+.main-home:hover img {
+    box-shadow: 3px 3px 20px rgba(21, 200, 255, 0.7);
+    cursor: zoom-in;
+}
+
+section.frost-background img:focus {
+    transform: scale(1.8);
+}
+
+section.description {
+    display: flex;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+main:hover .description {
+    background-color: #f7f7f7;
+}
+
+.description-items {
+    margin: auto;
+    width: 75%;
+}
+
+section.description p {
+    color: #000000;
+    line-height: 1.5;
+}
+
+section.description h3 {
+    color: var(--text-color);
+    font-size: 1.6em;
+    margin-bottom: 0.3em;
+    display: block;
+}
+
+section.description p {
+    font-size: 1.1em;
+}
+
+.home-body footer {
+    grid-row: 6 / 7;
+    grid-column: 1/ 7;
+    position: relative;
+    margin-top: 0;
+}
+
+/* === Universal Footer Styles === */
+footer, .footer-attire, .footer-music, .footer-crafts {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    padding: 0.9em;
+    border: #ffffff 1px solid;
+    border-radius: 10px;
+    transition: all 0.6s ease;
+    margin-top: 2em;
+}
+
+footer:hover, .footer-attire:hover, .footer-music:hover, .footer-crafts:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 4px 4px 15px #ffffffc7;
+}
+
+.footer__nav {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.footer__nav-item > a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin: 0.5em;
+}
+
+.footer__nav-item > a:hover {
+    text-decoration: underline;
+}
+
+.whatsapp {
+    border-left: 2px solid #ffffff;
+}
+
+/* === Contact Page Styles === */
+.body-contact {
+    background: url(images/lesothosemonkongmaletsunyanebasotho-51.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    height: 100vh;      
+    min-height: 100vh;
+    padding-top: 6em;
+}
+
+
+.main-contact {
+    display: flex;
+    grid-column: 1 / 7;
+    justify-content: end;
+    padding: 1em;
+    height: 100%;
+}
+form {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 10px;
+    height: 100%;
+    box-shadow: 3px 3px 20px #000000c7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+form label {
+    color: #000000;
+}
+
+form span {
+    color: var(--text-color);
+}
+
+.form__field, .form__item-option {
+    color: #000000;
+    border-radius: 7px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #000000;
+}
+
+.form-item {
+    margin: 0.7em;
+    width: 90%;
+    text-align: center;
+}
+
+form > button {
+    width: 90%;
+    height: 3em;
+    background-color: var(--text-color);
+    color: #ffffff;
+    font-weight: bold;
+    border: rgb(21, 200, 255) solid 1px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 5%;
+    font-size: 1.2em;
+    transition: all 150ms linear;
+}
+
+form > button:hover {
+    box-shadow: 3px 3px 15px var(--text-color);
+    transform: scale(0.9);
+}
+
+section.contact-details {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+section.contact-details .contact-intro {
+    flex-grow: 1;
+    width: 20em;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.info-wrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+.contact-info {
+    margin-left: 1em;
+    line-height: 1.5;
+}
+
+.contact-info a {
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.location {
+    padding: 0px 1em;
+    border-right: 2px solid #ffffff;
+}
+
+/* === Attire Page Styles === */
+.body-attire {
+    background: linear-gradient(90deg, rgb(0, 255, 255), rgb(0, 145, 145));
+    padding: 0.9em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 6em;
+}
+
+.image-list {
+    margin-top: 2em;
+    column-count: 5;
+    column-gap: 0.5em;
+}
+
+.attire-desciption {
+    width: 100%;
+    display: inline-block;
+    padding: 0.2em;
+    background-color: #ffffff;
+    border-radius: 0.7em;
+    margin: 0 0 0.3em 0;
+    transition: all 150ms ease;
+    break-inside: avoid;
+}
+
+.attire-desciption a {
+    color: rgb(0, 104, 104);
+    text-decoration: none;
+    margin: 0.2em;
+}
+
+.attire-desciption:hover a {
+    color: #000000;
+}
+
+.attire-desciption:hover {
+    box-shadow: 5px 5px 15px #ffffffd0;
+    cursor: zoom-in;
+}
+
+.attire-desciption:focus .attire-image {
+    transform: scale(1.7);
+    position: relative;
+}
+
+.attire-image {
+    width: 100%;
+    border-radius: 0.6em;
+    transition: transform 300ms ease;
+}
+
+.footer-attire, .footer-music {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 98%;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    padding: 0.9em;
+    border: #ffffff 1px solid;
+    border-radius: 10px;
+    transition: all 0.6s ease;
+}
+
+/*=== Music and Dance ===*/
+.music-body {
+    background: linear-gradient(90deg, rgb(0, 255, 255), rgb(0, 145, 145));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    min-height: 100vh;
+    padding-top: 6em;
+}
+
+.music-content-wrapper {
+    justify-content: center;
+}
+
+.main__music-and-dance {
+    margin-top: 2em;
+}
+
+.main__music-and-dance h2 {
+    font-size: 2.8em;
+    margin: 0.3em 0px;
+    text-align: center;
+    border-top: 2px solid #ffffff;
+}
+
+.music-content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex-shrink: 1;
+}
+
+.article-music {
+    background-color: #ffffff;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    width: 30%;
+    margin: 1em;
+    border-radius: 6px;
+    padding: 0.4em;
+    line-height: 1.2;
+    transition: all 0.6s ease;
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+
+.article-music p {
+    color: #000000;
+}
+
+.article-music h3 {
+    color: var(--text-color);
+    font-size: 1.8em;
+}
+
+.article-music:hover {
+    box-shadow: 4px 4px 15px #000000b6;
+}
+
+.article-music img {
+    width: 100%;
+}
+
+.article-music .Button__read-more, .Button__see-more {
+    background-color: var(--text-color);
+    margin-top: 0.9em;
+    font-size: 1.4em;
+    border-radius: 3px;
+    border: none;
+    text-align: center;
+    display: inline-block;
+    padding: 0.2em;
+}
+
+.Button__see-more {
+    margin: 0.3em;
+}
+
+.Button__read-more a, .Button__see-more a {
+    text-decoration: none;
+}
+
+.Button__read-more:hover, .Button__see-more:hover {
+    background-color: rgb(1, 228, 228);
+    box-shadow: 2px 2px 10px #000000b7;
+}
+
+/* Traditional Dances*/
+.traditional-dances {
+    background-color: #ffffff;
+    border-radius: 6px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+
+.dance-discription {
+    display: flex;
+}
+
+.traditional-dances h3 {
+    color: var(--text-color);
+    margin-left: 0.5em;
+    font-size: 2em;
+}
+
+.traditional-dances video {
+    border-radius: 5px;
+    margin: 0.5em;
+    max-width: 50%;
+    height: 200px;
+}
+
+.traditional-dances p {
+    margin: auto;
+    display: inline-block;
+    padding-left: 0.4em;
+    border-left: #ffffff solid 2px;
+    color: #000000;
+    font-size: 1.1em;
+}
+
+/*Crafts and Art*/
+.body-crafts {
+    background: linear-gradient(90deg, rgb(0, 255, 255), rgb(0, 145, 145));
+    padding: 0.2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 1fr);
+    grid-template-rows: repeat(auto-fill, 1fr);
+    height: 100dvh;
+    min-height: 100vh;
+    padding-top: 5em;
+}
+
+.header-crafts {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: end;
+    position: fixed;
+
+    width: 97%;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    padding: 0.9em;
+    border: #ffffff 1px solid;
+    border-radius: 10px;
+    transition: box-shadow 200ms ease;
+    transition: all 0.6s ease;
+    align-items: center;
+    z-index: 1;
+    top: 0.4em;
+    place-self: center;
+}
+
+.main-crafts {
+    margin-top: 2em;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.footer-crafts {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+
+.crafts-container {
+    display: flex;
+    gap: 0.5em;
+    width: 100%;
+}
+
+.crafts-container:hover .craft-card {
+    flex: 0.5;
+}
+
+.craft-card {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    position: relative;
+    height: 400px;
+    border-radius: 15px;
+    flex: 1;
+    transition: flex 300ms ease;
+}
+
+.craft-description {
+    position: absolute;
+    bottom: 0px;
+    border-radius: 7px;
+    padding: 0.3em;
+    width: 100%;
+
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.craft-card:focus .craft-description {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: block;
+
+    pointer-events: auto;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.craft-card:hover {
+    cursor: pointer;
+}
+
+.craft-card a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.craft-card a:hover {
+    text-decoration: underline;
+}
+
+.craft-description h3 {
+    color: var(--text-color);
+}
+
+.basket {
+    background-image: url(images/Basotho-Arts-and-craft/Basotho_Grain_Baskets.jpg);
+}
+
+.mokorotlo {
+    background-image: url(images/Basotho-Arts-and-craft/Mokorotlo.jpg);
+}
+
+.thethana {
+    background-image: url(images/Basotho-Arts-and-craft/thethana.jpg);
+}
+
+.molamu {
+    background-image: url(images/Basotho-Arts-and-craft/Molamu.jpg);
+}
+
+/* === Hosting page Styles ===*/
+.body-hosting{
+    background-image: url(images/Travel-Feature_Lesotho_The-Mountain-Kingdom.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 6em 1fr 7em;
+    overflow: hidden;
+    padding: 0;
+}
+
+.body-hosting header {
+    grid-row: 1;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    z-index: 1000;
+    margin: 0.5em;
+}
+
+.main-hosting{
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    overflow: hidden;
+}
+
+.main-hosting h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.main-hosting h1 span {
+    color: var(--text-color);
+}
+
+.hosting__page-purpose{
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    box-shadow: -5px -5px 15px #ffffffbb, 5px 5px 15px #000000;
+    padding: 2em;
+    border-radius: 7px;
+    text-align: center;
+    font-size: 1.2em;
+    max-width: 400px;
+    width: 90%;
+    border: #ffffff solid 2px;
+}
+
+.hosting__page-purpose p {
+    margin-bottom: 0.8em;
+    line-height: 1.4;
+}
+
+.footer-hosting {
+    grid-row: 3;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    padding: 0.5em;
+    border: #ffffff 1px solid;
+    border-radius: 10px;
+    transition: all 0.6s ease;
+    margin: 0.5em;
+}
+
+.footer-hosting:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 4px 4px 15px #ffffffc7;
+}
+
+.footer-hosting .footer__nav {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 0.5em;
+}
+
+.footer-hosting .footer__nav-item > a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin: 0.3em;
+}
+
+.footer-hosting .footer__nav-item img {
+    width: 24px !important;
+    margin-right: 0.3em;
+}
+
+.footer-hosting > p {
+    font-size: 0.8em;
+    margin: 0;
+}
+
+
+
+/* === Mobile Responsive Design === */
+@media (max-width: 768px) {
+    body {
+        padding: 0.2em;
+    }
+
+    /* Header adjustments */
+    header, .header-attire, .header-contact, .header-crafts, .music-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 0.5em;
+        left: 0.2em;
+        right: 0.2em;
+        top: 0.2em;
+    }
+
+    header > h2, .header-attire > h2, .header-contact > h2, .header-crafts > h2, .music-header > h2 {
+        margin-bottom: 0.5em;
+    }
+
+    ul.nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.2em;
+    }
+
+    ul.nav-links li {
+        padding: 0.4em 0.8em;
+    }
+
+    ul.nav-links li:last-child {
+        border-left: none;
+    }
+
+    ul.nav-links a {
+        font-size: 0.9em;
+    }
+
+    /* Home page mobile */
+    .home-body {
+        grid-template-rows: auto repeat(4, 1fr) auto;
+        gap: 0.5em;
+        padding: 0.1em;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .main-home {
+        flex-direction: column;
+    }
+
+    section.frost-background {
+        width: 100%;
+        min-height: 200px;
+        justify-content: center;
+    }
+
+    section.frost-background img {
+        position: relative;
+        right: 0;
+        max-width: 80%;
+    }
+
+    .description-items {
+        width: 90%;
+        padding: 1em;
+    }
+
+    section.description h3 {
+        font-size: 1.4em;
+        text-align: center;
+    }
+
+    section.description p {
+        font-size: 1em;
+    }
+
+    /* Attire page mobile */
+    .body-attire, .music-body, .body-crafts {
+        padding-top: 5em;
+    }
+
+    .image-list {
+        column-count: 2;
+        margin-top: 1em;
+    }
+
+    /* Music page mobile */
+    .main__music-and-dance h2 {
+        font-size: 2.2em;
+    }
+
+    .article-music {
+        width: 100%;
+    }
+
+    .dance-discription {
+        flex-direction: column;
+    }
+
+    .traditional-dances video {
+        max-width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .traditional-dances p {
+        border-left: none;
+        padding-left: 0;
+        margin: 1em;
+    }
+
+    /* Contact page mobile */
+    .body-contact {
+        padding-top: 6em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .main-contact {
+        flex-direction: column;
+        margin-top: 2em;
+        grid-column: auto;
+        height: auto;
+    }
+
+    .info-wrapper {
+        margin: 1em 0px;
+        flex-direction: column;
+    }
+
+    .location {
+        border-right: none;
+        border-bottom: 2px solid #ffffff;
+        padding-bottom: 1em;
+        margin-bottom: 0.5em;
+    }
+
+    .contact-info {
+        margin-left: 0;
+    }
+
+    form {
+        height: auto;
+        margin-top: 2em;
+        position: relative;
+    }
+
+    form > button {
+        position: relative;
+        bottom: auto;
+        margin-top: 1em;
+    }
+
+    /* Crafts page mobile */
+    .body-crafts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-crafts {
+        margin-top: 1em;
+        width: 100%;
+    }
+
+    .crafts-container {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .craft-card {
+        height: 200px;
+        flex: none;
+    }
+
+    .crafts-container:hover .craft-card {
+        flex: none;
+    }
+
+    .craft-card:hover {
+        flex: none;
+    }
+
+    /* Footer adjustments */
+    .footer__nav {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    .whatsapp {
+        border-left: none;
+        border-top: 2px solid #ffffff;
+        padding-top: 0.5em;
+    }
+    
+    /* Mobile responsive for hosting page */
+    .body-hosting {
+        grid-template-rows: 5.5em 1fr 5em;
+    }
+    
+    .body-hosting header {
+        margin: 0.2em;
+    }
+
+
+    .main-hosting h1 {
+        font-size: 2em;
+        margin-bottom: 0.8em;
+    }
+    
+    .hosting__page-purpose {
+        padding: 1.5em;
+        font-size: 1.1em;
+        max-width: 350px;
+    }
+    
+    .footer-hosting .footer__nav {
+        flex-direction: column;
+        gap: 0.2em;
+        margin-bottom: 0.3em;
+    }
+    
+    .footer-hosting .footer__nav-item > a {
+        margin: 0.1em;
+        font-size: 0.9em;
+    }
+    
+    .footer-hosting .whatsapp {
+        border-left: none;
+        border-top: 2px solid #ffffff;
+        padding-top: 0.2em;
+    }
+
+}
+
+@media (max-width: 480px) {
+    
+    header, .header-attire, .header-contact, .header-crafts, .music-header {
+        padding: 0.4em;
+    }
+
+    header > h2, .header-attire > h2, .header-contact > h2, .header-crafts > h2, .music-header > h2 {
+        font-size: 1.2em;
+    }
+
+    ul.nav-links li {
+        padding: 0.3em 0.6em;
+    }
+
+    ul.nav-links a {
+        font-size: 0.8em;
+    }
+
+    /* Attire page */
+    .image-list {
+        column-count: 2;
+    }
+
+    .attire-desciption a {
+        font-size: 0.9em;
+    }
+
+    /* Music page */
+    .main__music-and-dance h2 {
+        font-size: 1.8em;
+    }
+
+    /* Crafts page*/
+    .body-crafts {
+        padding-top: 6em;
+    }
+
+    /* Contact page */
+    section.contact-details h1 {
+        font-size: 2em;
+    }
+
+    .form__field {
+        width: 100%;
+    }
+
+    #topic {
+        width: 100%;
+    }
+
+    /* hosting page */
+    .body-hosting {
+        grid-template-rows: 5em 1fr 4.5em;
+    }
+
+    .body-hosting header {
+        height: 5em;
+    }
+    .body-hosting footer {
+        height: 7em;
+    }
+    
+    .main-hosting h1 {
+        font-size: 1.6em;
+        margin-bottom: 0.6em;
+    }
+    
+    .hosting__page-purpose {
+        padding: 1.2em;
+        font-size: 1em;
+        max-width: 300px;
+    }
+    
+    .footer-hosting {
+        padding: 0.3em;
+    }
+    
+    .footer-hosting .footer__nav-item img {
+        width: 20px !important;
+    }
+
+}
+
+@media (max-width: 320px) {
+    body {
+        padding: 0.1em;
+    }
+
+    /* Header optimizations */
+    header, .header-attire, .header-contact, .header-crafts, .music-header {
+        padding: 0.3em;
+        left: 0.1em;
+        right: 0.1em;
+        top: 0.1em;
+    }
+
+    header > h2, .header-attire > h2, .header-contact > h2, .header-crafts > h2, .music-header > h2 {
+        font-size: 1.1em;
+        margin-bottom: 0.3em;
+    }
+
+    ul.nav-links li {
+        padding: 0.25em 0.4em;
+        margin: 0.1em;
+    }
+
+    ul.nav-links a {
+        font-size: 0.75em;
+    }
+
+    /* Page adjustments */
+
+
+    /* Home page */
+    section.frost-background img {
+        max-width: 95%;
+    }
+
+    .description-items {
+        width: 95%;
+        padding: 0.5em;
+    }
+
+    section.description h3 {
+        font-size: 1.2em;
+    }
+
+    section.description p {
+        font-size: 0.9em;
+    }
+
+    /* Attire page */
+    .image-list {
+        column-count: 1;
+        margin-top: 1em;
+    }
+
+    .attire-desciption {
+        max-width: 280px;
+        margin: 0 auto 0.3em auto;
+    }
+
+    .attire-desciption a {
+        font-size: 0.8em;
+    }
+
+    /* Music page */
+    .main__music-and-dance h2 {
+        font-size: 1.5em;
+    }
+
+    .article-music h3 {
+        font-size: 1.4em;
+    }
+
+    .traditional-dances h3 {
+        font-size: 1.6em;
+    }
+
+    /* Contact page */
+    .main-contact {
+        width: 99%;
+    }
+    .contact-intro {
+        width: 100%;
+    }
+    section.contact-details h1 {
+        font-size: 1.8em;
+    }
+
+
+    form {
+        padding: 1em;
+    }
+
+    .form__field, .form__item-option {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    /* Crafts page */
+    .craft-card {
+        height: 250px;
+    }
+    .body-crafts {
+        padding-top: 6em;
+    }
+
+    /* hosting page */
+    .body-hosting {
+        grid-template-rows: 4.5em 1fr 4em;
+    }
+    
+    .body-hosting header {
+        margin: 0.1em;
+    }
+    .body-hosting footer {
+        height: 7em;
+    }
+    
+    .main-hosting h1 {
+        font-size: 1.4em;
+        margin-bottom: 0.5em;
+    }
+    
+    .hosting__page-purpose {
+        padding: 1em;
+        font-size: 0.9em;
+        max-width: 280px;
+    }
+    
+    .hosting__page-purpose p {
+        margin-bottom: 0.6em;
+    }
+    
+    .footer-hosting {
+        padding: 0.2em;
+        margin: 0.2em;
+    }
+    
+    .footer-hosting .footer__nav-item img {
+        width: 16px !important;
+    }
+    
+    .footer-hosting > p {
+        font-size: 0.7em;
+    }
+    
+    .body-hosting header {
+        height: 5em;
+    }
+
+
+    /* Footer adjustments */
+    footer, .footer-attire, .footer-music, .footer-crafts {
+        padding: 0.3em;
+    }
+
+    .footer__nav-item > a {
+        margin: 0.2em;
+        font-size: 0.8em;
+    }
+
+    .footer__nav-item img {
+        width: 24px !important;
+    }
+
+    footer > p, .footer-attire > p, .footer-music > p, .footer-crafts > p {
+        font-size: 0.75em;
+        margin-top: 0.3em;
+    }
+}
