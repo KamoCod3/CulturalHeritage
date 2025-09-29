@@ -572,6 +572,9 @@ section.contact-details .contact-intro {
     min-height: 100vh;
     padding-top: 5em;
 }
+.main-crafts > h2 {
+    font-size: 3em;
+}
 
 .header-crafts {
     grid-column: 1 / 2;
@@ -684,118 +687,6 @@ section.contact-details .contact-intro {
 .molamu {
     background-image: url(images/Basotho-Arts-and-craft/molamu.jpg);
 }
-
-/* === Hosting page Styles ===*/
-.body-hosting{
-    background-image: url(images/Travel-Feature_Lesotho_The-Mountain-Kingdom.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 6em 1fr 7em;
-    overflow: hidden;
-    padding: 0;
-}
-
-.body-hosting header {
-    grid-row: 1;
-    position: relative;
-    top: auto;
-    left: auto;
-    right: auto;
-    z-index: 1000;
-    margin: 0.5em;
-}
-
-.main-hosting{
-    grid-row: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1em;
-    overflow: hidden;
-}
-
-.main-hosting h1 {
-    font-size: 2.5em;
-    text-align: center;
-    margin-bottom: 1em;
-}
-
-.main-hosting h1 span {
-    color: var(--text-color);
-}
-
-.hosting__page-purpose{
-    background-color: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-
-    box-shadow: -5px -5px 15px #ffffffbb, 5px 5px 15px #000000;
-    padding: 2em;
-    border-radius: 7px;
-    text-align: center;
-    font-size: 1.2em;
-    max-width: 400px;
-    width: 90%;
-    border: #ffffff solid 2px;
-}
-
-.hosting__page-purpose p {
-    margin-bottom: 0.8em;
-    line-height: 1.4;
-}
-
-.footer-hosting {
-    grid-row: 3;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    padding: 0.5em;
-    border: #ffffff 1px solid;
-    border-radius: 10px;
-    transition: all 0.6s ease;
-    margin: 0.5em;
-}
-
-.footer-hosting:hover {
-    background-color: rgba(0, 0, 0, 0.3);
-    box-shadow: 4px 4px 15px #ffffffc7;
-}
-
-.footer-hosting .footer__nav {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    margin-bottom: 0.5em;
-}
-
-.footer-hosting .footer__nav-item > a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    margin: 0.3em;
-}
-
-.footer-hosting .footer__nav-item img {
-    width: 24px !important;
-    margin-right: 0.3em;
-}
-
-.footer-hosting > p {
-    font-size: 0.8em;
-    margin: 0;
-}
-
 
 
 /* === Mobile Responsive Design === */
@@ -994,44 +885,6 @@ section.contact-details .contact-intro {
         border-top: 2px solid #ffffff;
         padding-top: 0.5em;
     }
-    
-    /* Mobile responsive for hosting page */
-    .body-hosting {
-        grid-template-rows: 5.5em 1fr 5em;
-    }
-    
-    .body-hosting header {
-        margin: 0.2em;
-    }
-
-
-    .main-hosting h1 {
-        font-size: 2em;
-        margin-bottom: 0.8em;
-    }
-    
-    .hosting__page-purpose {
-        padding: 1.5em;
-        font-size: 1.1em;
-        max-width: 350px;
-    }
-    
-    .footer-hosting .footer__nav {
-        flex-direction: column;
-        gap: 0.2em;
-        margin-bottom: 0.3em;
-    }
-    
-    .footer-hosting .footer__nav-item > a {
-        margin: 0.1em;
-        font-size: 0.9em;
-    }
-    
-    .footer-hosting .whatsapp {
-        border-left: none;
-        border-top: 2px solid #ffffff;
-        padding-top: 0.2em;
-    }
 
 }
 
@@ -1085,36 +938,7 @@ section.contact-details .contact-intro {
         width: 100%;
     }
 
-    /* hosting page */
-    .body-hosting {
-        grid-template-rows: 5em 1fr 4.5em;
-    }
-
-    .body-hosting header {
-        height: 5em;
-    }
-    .body-hosting footer {
-        height: 7em;
-    }
     
-    .main-hosting h1 {
-        font-size: 1.6em;
-        margin-bottom: 0.6em;
-    }
-    
-    .hosting__page-purpose {
-        padding: 1.2em;
-        font-size: 1em;
-        max-width: 300px;
-    }
-    
-    .footer-hosting {
-        padding: 0.3em;
-    }
-    
-    .footer-hosting .footer__nav-item img {
-        width: 20px !important;
-    }
 
 }
 
@@ -1144,9 +968,6 @@ section.contact-details .contact-intro {
     ul.nav-links a {
         font-size: 0.75em;
     }
-
-    /* Page adjustments */
-
 
     /* Home page */
     section.frost-background img {
@@ -1222,51 +1043,6 @@ section.contact-details .contact-intro {
     .body-crafts {
         padding-top: 6em;
     }
-
-    /* hosting page */
-    .body-hosting {
-        grid-template-rows: 5.5em 1fr 5.5em;
-    }
-    
-    .body-hosting header {
-        margin: 0.1em;
-    }
-    .body-hosting footer {
-        height: 7em;
-    }
-    
-    .main-hosting h1 {
-        font-size: 1.4em;
-        margin-bottom: 0.5em;
-    }
-    
-    .hosting__page-purpose {
-        padding: 1em;
-        font-size: 0.9em;
-        max-width: 280px;
-    }
-    
-    .hosting__page-purpose p {
-        margin-bottom: 0.6em;
-    }
-    
-    .footer-hosting {
-        padding: 0.2em;
-        margin: 0.2em;
-    }
-    
-    .footer-hosting .footer__nav-item img {
-        width: 16px !important;
-    }
-    
-    .footer-hosting > p {
-        font-size: 0.7em;
-    }
-    
-    .body-hosting header {
-        height: 5em;
-    }
-
 
     /* Footer adjustments */
     footer, .footer-attire, .footer-music, .footer-crafts {
