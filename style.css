@@ -19,7 +19,7 @@ body{
 }
 
 /* === Universal Header Styles === */
-header, .header-attire, .header-contact, .header-crafts, .music-header {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,7 +39,6 @@ header, .header-attire, .header-contact, .header-crafts, .music-header {
     z-index: 1000;
 }
 
-/* Fixed header positioning for different pages */
 .header-attire, .header-contact, .header-crafts, .music-header {
     background-color: rgba(0, 0, 0, 0.3);
 }
@@ -49,15 +48,12 @@ header:hover, .header-attire:hover, .header-contact:hover, .header-crafts:hover,
     box-shadow: 4px 4px 15px #ffffffc7;
 }
 
-header img {
-    display: none;
-}
-
 .heading-highlight {
     color: var(--text-color);
 }
 
-header > h2, .header-attire > h2, .header-contact > h2, .header-crafts > h2, .music-header > h2 {
+/*Universal header*/
+header > h2 {
     flex-grow: 1;
     margin: 0;
 }
@@ -114,7 +110,6 @@ ul.nav-links li:hover a {
     min-height: 100vh;
 }
 
-/* Home page uses grid positioning for header */
 .home-body header {
     grid-row: 1 / 2;
     grid-column: 1 / 7;
@@ -573,7 +568,7 @@ section.contact-details .contact-intro {
     padding-top: 5em;
 }
 .main-crafts > h2 {
-    font-size: 3em;
+    font-size: 2.2em;
 }
 
 .header-crafts {
@@ -583,7 +578,7 @@ section.contact-details .contact-intro {
     justify-content: end;
     position: fixed;
 
-    width: 97%;
+    width: 99%;
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
